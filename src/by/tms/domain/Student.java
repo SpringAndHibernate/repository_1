@@ -3,7 +3,8 @@ package by.tms.domain;
 import java.util.Objects;
 
 public class Student {
-	private long id;
+	private static int incId = 1;
+	private int id = incId++;
 	private String name;
 	private String login;
 	private String password;
@@ -25,7 +26,7 @@ public class Student {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
