@@ -3,8 +3,7 @@ package by.tms.domain;
 import java.util.Objects;
 
 public class Student {
-	private static int incId = 1;
-	private int id = incId++;
+	private int id;
 	private String name;
 	private String login;
 	private String password;
@@ -12,6 +11,15 @@ public class Student {
 	private String group;
 
 	public Student() {
+	}
+
+	public Student(int id,String name, String login, String password, String faculty, String group) {
+		this.id = id;
+		this.name = name;
+		this.login = login;
+		this.password = password;
+		this.faculty = faculty;
+		this.group = group;
 	}
 
 	public Student(String name, String login, String password, String faculty, String group) {
@@ -22,7 +30,7 @@ public class Student {
 		this.group = group;
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
